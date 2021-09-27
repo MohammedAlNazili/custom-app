@@ -81,9 +81,9 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Purchase Invoice": "custom_app.custom_app.overrides.custom_purchase_invoice.CustomPurchaseInvoice"
+}
 
 # Document Events
 # ---------------
@@ -173,3 +173,9 @@ user_data_fields = [
 # 	"custom_app.auth.validate"
 # ]
 
+
+jenv = {
+	"methods": [
+		"gen_qrcode:custom_app.utils.qrcode.gen_qrcode"
+	]
+}
